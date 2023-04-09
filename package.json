@@ -1,6 +1,6 @@
 {
   "name": "localgeneric",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local Storage wrapper with TypeScript generics support.",
   "main": "index.ts",
   "scripts": {
