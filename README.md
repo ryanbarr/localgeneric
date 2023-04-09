@@ -1,11 +1,11 @@
-# generic-store
+# smart-storage
 
-`generic-store` is a type-safe wrapper for `localStorage` which provides support for [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html).
+`smart-storage` is a type-safe wrapper for `localStorage` which provides support for [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html).
 
 ## Installation
 
 ```cli
-npm install generic-store
+npm install smart-storage
 ```
 
 ## Examples
@@ -13,7 +13,7 @@ npm install generic-store
 This example shows getting and setting a string value in localStorage under the key `stringStore`. TypeScript will error if an attempt to set a non-string value is made.
 
 ```typescript
-import { Store } from "generic-store";
+import { Store } from "smart-storage";
 
 const myStore = new Store<string>("stringStore", "J. Doe");
 console.log(myStore.get()); // output: "J. Doe"
@@ -25,7 +25,7 @@ console.log(myStore.get()); // output: "B. Ross"
 Objects can be stored with their types enforced, with direct access to an object's properties on the store itself:
 
 ```typescript
-import { Store } from "generic-store";
+import { Store } from "smart-storage";
 
 interface StoreProps {
   foo: string;
