@@ -28,7 +28,7 @@ class _GenericStore<T> implements StoreProps<T> {
   };
 
   public set = (value: T | Partial<T>) => {
-    Object.assign({}, this, value);
+    Object.assign(this, value);
     return window.localStorage.setItem(
       this.key,
       JSON.stringify(

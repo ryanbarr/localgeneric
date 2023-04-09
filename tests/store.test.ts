@@ -70,11 +70,20 @@ describe("type safety", () => {
 describe("property access", () => {
   const store = new Store<{ foo: string }>("propertyAccess", { foo: "bar" });
 
+  test("can retrieve via dot notation", () => {
+    expect(store.get().foo).toBe("bar");
+  });
+
   test("can retrieve via property inheritance", () => {
     expect(store.foo).toBe("bar");
   });
 
-  test("can retrieve via dot notation", () => {
-    expect(store.get().foo).toBe("bar");
+  test("can retrieve via dot notation after update", () => {
+    store.set({ foo: "baz" });
+    expect(store.get().foo).toBe("baz");
+  });
+
+  test("can retrieve via property inheritance after update", () => {
+    expect(store.foo).toBe("baz");
   });
 });
