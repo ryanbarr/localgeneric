@@ -2,6 +2,8 @@
 
 `localgeneric` is a type-safe wrapper for `localStorage` which provides support for [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html).
 
+![Unit Tests](https://github.com/ryanbarr/localgeneric/actions/workflows/node.js.yml/badge.svg)
+
 ## Installation
 
 ```cli
