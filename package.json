@@ -1,0 +1,39 @@
+{
+  "name": "generic-store",
+  "version": "1.0.0",
+  "description": "Local Storage wrapper with TypeScript support.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --env=jsdom"
+  },
+  "files": [
+    "index.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanbarr/generic-store.git"
+  },
+  "keywords": [
+    "local",
+    "storage",
+    "typescript",
+    "wrapper",
+    "generics",
+    "interface"
+  ],
+  "author": "Ryan Barr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanbarr/generic-store/issues"
+  },
+  "homepage": "https://github.com/ryanbarr/generic-store#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@types/jest": "^29.5.0",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
+  }
+}
