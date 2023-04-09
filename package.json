@@ -1,5 +1,5 @@
 {
-  "name": "smart-storage",
+  "name": "localgeneric",
   "version": "1.0.0",
   "description": "Local Storage wrapper with TypeScript generics support.",
   "main": "index.ts",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanbarr/smart-storage.git"
+    "url": "git+https://github.com/ryanbarr/localgeneric.git"
   },
   "keywords": [
     "local",
@@ -24,9 +24,9 @@
   "author": "Ryan Barr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryanbarr/smart-storage/issues"
+    "url": "https://github.com/ryanbarr/localgeneric/issues"
   },
-  "homepage": "https://github.com/ryanbarr/smart-storage#readme",
+  "homepage": "https://github.com/ryanbarr/localgeneric#readme",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
