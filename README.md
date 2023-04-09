@@ -1,6 +1,6 @@
 # generic-store
 
-`generic-store` is a type-safe wrapper for `localStorage` which provides support for [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html).
+`generic-store` is a type-safe wrapper for `localStorage` which provides support for [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html).
 
 ## Installation
 
