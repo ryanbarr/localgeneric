@@ -1,6 +1,8 @@
 // Type definitions for localgeneric v1.1.0
 // Project: localgeneric
 // Definitions by: Ryan Barr <https://github.com/ryanbarr>
+declare module "localgeneric";
+
 declare class _GenericStore<T> {
   public key: string;
 
