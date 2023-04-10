@@ -1,14 +1,6 @@
-interface StoreProps<T> {
-  key: string;
-  get: () => T;
-  set: (v: T) => void;
-}
-
-class _GenericStore<T> implements StoreProps<T> {
-  public key: string;
-
-  constructor(key: string, defaults?: T) {
-    const proto = { ..._GenericStore.prototype };
+export class GenericStore {
+  constructor(key, defaults) {
+    const proto = { ...GenericStore.prototype };
     if (defaults) Object.assign(proto, Object.getPrototypeOf(defaults));
     Object.setPrototypeOf(this, proto);
     Object.assign(this, defaults);
@@ -22,12 +14,12 @@ class _GenericStore<T> implements StoreProps<T> {
     }
   }
 
-  public get = (): T => {
+  get = () => {
     const data = window.localStorage.getItem(this.key);
     return data ? JSON.parse(data) : null;
   };
 
-  public set = (value: T | Partial<T>) => {
+  set = (value) => {
     Object.assign(this, value);
     return window.localStorage.setItem(
       this.key,
@@ -38,7 +30,4 @@ class _GenericStore<T> implements StoreProps<T> {
   };
 }
 
-type GenericStore<T> = _GenericStore<T> & T;
-
-export const Store: new <T>(key: string, data?: T) => GenericStore<T> =
-  _GenericStore as any;
+export const Store = GenericStore;
