@@ -2,7 +2,8 @@
   "name": "localgeneric",
   "version": "1.0.1",
   "description": "Local Storage wrapper with TypeScript generics support.",
-  "main": "index.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "jest --env=jsdom"
   },
@@ -35,5 +36,8 @@
     "babel-jest": "^29.5.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0"
+  },
+  "dependencies": {
+    "typescript": "^5.0.4"
   }
 }
