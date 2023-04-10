@@ -1,6 +1,8 @@
-export class GenericStore {
-  constructor(key, defaults) {
-    const proto = { ...GenericStore.prototype };
+export class _GenericStore<T> {
+  public key: string;
+
+  constructor(key: string, defaults?: T) {
+    const proto = { ..._GenericStore.prototype };
     if (defaults) Object.assign(proto, Object.getPrototypeOf(defaults));
     Object.setPrototypeOf(this, proto);
     Object.assign(this, defaults);
@@ -19,7 +21,7 @@ export class GenericStore {
     return data ? JSON.parse(data) : null;
   };
 
-  set = (value) => {
+  set = (value: T | Partial<T>) => {
     Object.assign(this, value);
     return window.localStorage.setItem(
       this.key,
@@ -30,4 +32,7 @@ export class GenericStore {
   };
 }
 
-export const Store = GenericStore;
+type GenericStore<T> = _GenericStore<T> & T;
+
+export const Store: new <T>(key: string, data?: T) => GenericStore<T> =
+  _GenericStore as any;

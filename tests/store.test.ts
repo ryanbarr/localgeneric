@@ -1,4 +1,4 @@
-import { Store } from "../index.js";
+import { Store } from "../index";
 
 describe("string stores", () => {
   const store = new Store<string>("stringStores", "J. Doe");
